@@ -11,7 +11,6 @@ int main()
 	string str;
 	getline(cin, str);
 	int n = str.length();
-	int flag = 1;
 	stack<char> s;
 
 	for (int i = 0; i < n; i++)
