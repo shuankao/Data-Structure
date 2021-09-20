@@ -1,0 +1,36 @@
+#include<iostream>
+#include<string.h>
+#include<sstream>
+#include<stack>
+
+using namespace std;
+int main()
+{
+	string str;
+	getline(cin, str);
+	int n = str.length();
+	stack<char> s;
+	int count = 0;
+	int i = 0;
+	for (int i = 0; i < n / 2; i++)
+	{
+		s.push(str.at(i));
+		count++;
+	}
+	if ((n % 2) != 0)
+	{
+		count++;
+	}
+
+	for (int i = count; i < n; i++)
+	{
+		if (s.top() != str.at(i))
+		{
+			cout << "no";
+			return 0;
+		}
+		s.pop();
+	}
+	cout << "yes";
+	return 0;
+}
