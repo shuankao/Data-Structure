@@ -1,0 +1,30 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	string a;
+	while (cin >> a)
+	{
+		bool flag = 0;
+		for (int i = a.length() - 1; i >= 0; i--)
+		{
+			while (a[i] == '0' && flag == 0)
+			{
+				if (i == 0)
+				{
+					cout << '0';
+					return 0;
+				}
+				else
+				{
+					i--;
+				}
+			}
+			flag = 1;
+			cout << a[i];
+		}
+	}
+	return 0;
+}
