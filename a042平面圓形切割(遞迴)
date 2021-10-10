@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int a, cirnum(int n);
+
+int main()
+{
+	while (cin >> a)
+	{
+		cout << cirnum(a) << endl;
+	}
+}
+int cirnum(int n)
+{
+	if (n == 1)
+	{
+		return 2;
+	}
+	else
+	{
+		return cirnum(n - 1) + 2*(n - 1);
+	}
+}
