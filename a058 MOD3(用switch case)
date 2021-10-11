@@ -1,0 +1,32 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int a,b[100];//宣告輸入的第一個數,及將記錄一連串輸入數值之陣列
+	int d=0, e=0, f=0;//分別代表三的倍數,三的倍數加一,三的倍數加二之個數
+	while (cin >> a)
+	{
+		for (int i = 0; i < a; i++)
+		{
+			cin >> b[i];
+			switch (b[i]%3)//除以三餘0,1,2之狀況
+			{
+			case 0:
+				d++;//餘0數量加一
+				break;
+			case 1:
+				e++;//餘1數量加一
+				break;
+			case 2:
+				f++;//餘2數量加一
+				break;
+			}
+		}
+		cout << d << ' ' << e << ' ' << f << endl;
+		
+
+	}
+}
+
