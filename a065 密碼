@@ -1,0 +1,19 @@
+#include<iostream>
+#include<math.h>
+
+using namespace std;
+
+int main()
+{
+	string a;
+	while (cin >> a)
+	{
+		for (int i = 0; i < a.length()-1; i++)
+		{
+			cout << abs(a[i + 1] - a[i]);//印出後一項ascii減前一項之絕對值
+		}
+		cout << endl;
+	}
+	return 0;
+}
+
