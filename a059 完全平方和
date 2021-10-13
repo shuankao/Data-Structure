@@ -1,0 +1,25 @@
+#include<iostream>
+#include<math.h>
+
+using namespace std;
+
+int main()
+{
+	int set;
+	cin >> set;
+	for (int i = 1; i <= set; i++)
+	{
+		int a, b,sum=0;
+		cin >> a;
+		cin >> b;
+		for (float j = a; j <= b; j++)
+		{
+			if (pow(sqrt(j),2) == j)//若該數(float型別)平方根之平方等於原數,表示其為完全平方數,則加到sum
+			{
+				sum += j;
+			}
+		}
+		cout << "Case " << i << ": " << sum << endl;
+	}
+}
+
