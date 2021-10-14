@@ -1,0 +1,41 @@
+#include<iostream>
+
+using namespace std;
+
+void insert(int a[],int r,int i);
+int main()
+{
+	int len;
+	while (cin >> len)
+	{
+		int a[1001];
+		for (int i = 1; i <= len; i++)
+		{
+			cin >> a[i];
+		}
+		for (int i = 2; i <= len; i++)
+		{
+			a[0] = a[i];
+			insert(a, a[i], i - 1);
+		}
+		for (int i = 1; i <= len; i++)
+		{
+			cout << a[i]<<' ';
+		}
+		cout << endl;
+	}
+	return 0;
+}
+
+void insert(int a[], int r,int i)
+{
+	int j = i;
+	{
+		while (r < a[j])
+		{
+			a[j + 1] = a[j];
+			j--;
+		}
+		a[j + 1] = r;
+	}
+}
