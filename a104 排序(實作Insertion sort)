@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void insert(int a[],int r,int i);
+void insert(int a[], int r, int i);
 int main()
 {
 	int len;
@@ -20,7 +20,7 @@ int main()
 		}
 		for (int i = 1; i <= len; i++)
 		{
-			cout << a[i]<<' ';
+			cout << a[i] << ' ';
 		}
 		cout << endl;
 	}
@@ -30,7 +30,7 @@ int main()
 void insert(int a[], int r, int i) //插入排序法,參數為整數陣列、要排序之項、前面a[0]~a[i]已排序好之陣列
 {
 	int j = i;
-	while (r < a[j]); //比較r和前面的數值，尋找適當之插入位置
+	while (r < a[j]) //比較r和前面的數值，尋找適當之插入位置
 	{
 		a[j + 1] = a[j]; //若r較小,則a[j]向後挪一格
 		j--; //繼續往前一格比較
