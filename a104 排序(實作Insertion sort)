@@ -3,20 +3,21 @@
 using namespace std;
 
 void insert(int a[],int r,int i);
+
 int main()
 {
 	int len;
 	while (cin >> len)
 	{
 		int a[1001];
-		for (int i = 1; i <= len; i++)
+		for (int i = 1; i <= len; i++)//輸入以空格隔開之整數
 		{
 			cin >> a[i];
 		}
-		for (int i = 2; i <= len; i++)
+		for (int i = 2; i <= len; i++)//從第二項到最後一項作插入排序
 		{
 			a[0] = a[i];
-			insert(a, a[i], i - 1);
+			insert(a, a[i], i - 1);//a陣列中，找a[i]在a[0]~a[i-1]中適當之插入位置
 		}
 		for (int i = 1; i <= len; i++)
 		{
@@ -27,15 +28,15 @@ int main()
 	return 0;
 }
 
-void insert(int a[], int r,int i)
+void insert(int a[], int r,int i)//插入排序法,參數為整數陣列、要排序之項、前面a[0]~a[i]已排序好之陣列
 {
 	int j = i;
 	{
-		while (r < a[j])
+		while (r < a[j]);//比較r和前面的數值，尋找適當之插入位置
 		{
-			a[j + 1] = a[j];
-			j--;
+			a[j + 1] = a[j];//若r較小,則a[j]向後挪一格
+			j--;//繼續往前一格比較
 		}
-		a[j + 1] = r;
+		a[j + 1] = r;//r插入適當位置
 	}
 }
