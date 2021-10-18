@@ -11,7 +11,7 @@ int main(){
 		cin >> a;
 		int sum = 1;
 		for (int j = 0; j < a.size(); j++) {
-			sum *= a[j]-'0';
+			sum *= a[j]-'0';//字元減去字元'0'，可得該字元代表之數值，並存入整數型別的sum
 		}
 		cout << sum << endl;
 	}
