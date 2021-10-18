@@ -1,0 +1,19 @@
+#include<iostream>
+
+using namespace std;
+
+
+int main(){
+	string a;
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> a;
+		int sum = 1;
+		for (int j = 0; j < a.size(); j++) {
+			sum *= a[j]-'0';
+		}
+		cout << sum << endl;
+	}
+	return 0;
+}
